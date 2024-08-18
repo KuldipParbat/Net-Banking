@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="project2/src"/>
+	<classpathentry kind="src" path="/SendEmail"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/AbsoluteLayout.jar"/>
+	<classpathentry kind="lib" path="lib/activation.jar"/>
+	<classpathentry kind="lib" path="lib/mail.jar"/>
+	<classpathentry kind="lib" path="lib/mysql-connector-java-5.1.23-bin.jar"/>
+	<classpathentry kind="lib" path="lib/techsoftemail.jar"/>
+	<classpathentry kind="lib" path="project2/dist/lib/AbsoluteLayout.jar"/>
+	<classpathentry kind="lib" path="project2/dist/lib/activation.jar"/>
+	<classpathentry kind="lib" path="project2/dist/lib/mail.jar"/>
+	<classpathentry kind="lib" path="project2/dist/lib/mysql-connector-java-8.0.28.jar"/>
+	<classpathentry kind="lib" path="project2/dist/lib/techsoftemail.jar"/>
+	<classpathentry kind="lib" path="project2/dist/project2.jar"/>
+	<classpathentry kind="lib" path="E:/Net-Banking-Software-main/lib/SendEmail.jar"/>
+	<classpathentry kind="lib" path="E:/Net-Banking-Software-main/lib/MyMail1.jar"/>
+	<classpathentry kind="output" path="project2/build/classes"/>
+</classpath>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <style>
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Registration Form</h2>
+  
+  <form id="registrationForm" onsubmit="return validateForm()">
+    <label for="fullname">Full Name:</label>
+    <input type="text" id="fullname" name="fullname" required>
+    <span id="fullnameError" class="error"></span>
+
+    <br>
+
+    <label for="address">Address:</label>
+    <input type="text" id="address" name="address" required>
+    <span id="addressError" class="error"></span>
+
+    <br>
+
+    <label for="city">City:</label>
+    <input type="text" id="city" name="city" required>
+    <span id="cityError" class="error"></span>
+
+    <br>
+
+    <label for="gender">Gender:</label>
+    <select id="gender" name="gender" required>
+      <option value="">Select Gender</option>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="other">Other</option>
+    </select>
+    <span id="genderError" class="error"></span>
+
+    <br>
+
+    <label for="mobile">Mobile Number:</label>
+    <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required>
+    <span id="mobileError" class="error"></span>
+
+    <br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <span id="emailError" class="error"></span>
+
+    <br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+    <span id="passwordError" class="error"></span>
+
+    <br>
+
+    <input type="submit" value="Submit">
+  </form>
+
+  <script>
+    function validateForm() {
+      var fullname = document.getElementById("fullname").value;
+      var address = document.getElementById("address").value;
+      var city = document.getElementById("city").value;
+      var gender = document.getElementById("gender").value;
+      var mobile = document.getElementById("mobile").value;
+      var email = document.getElementById("email").value;
+      var password = document.getElementById("password").value;
+
+      // Simple validation example
+      if (fullname === "") {
+        document.getElementById("fullnameError").innerHTML = "Please enter your full name.";
+        return false;
+      } else {
+        document.getElementById("fullnameError").innerHTML = "";
+      }
+
+      if (address === "") {
+        document.getElementById("addressError").innerHTML = "Please enter your address.";
+        return false;
+      } else {
+        document.getElementById("addressError").innerHTML = "";
+      }
+
+      if (city === "") {
+        document.getElementById("cityError").innerHTML = "Please enter your city.";
+        return false;
+      } else {
+        document.getElementById("cityError").innerHTML = "";
+      }
+
+      if (gender === "") {
+        document.getElementById("genderError").innerHTML = "Please select your gender.";
+        return false;
+      } else {
+        document.getElementById("genderError").innerHTML = "";
+      }
+
+      if (mobile === "") {
+        document.getElementById("mobileError").innerHTML = "Please enter your mobile number.";
+        return false;
+      } else if (!/^\d{10}$/.test(mobile)) {
+        document.getElementById("mobileError").innerHTML = "Please enter a valid 10-digit mobile number.";
+        return false;
+      } else {
+        document.getElementById("mobileError").innerHTML = "";
+      }
+
+      if (email === "") {
+        document.getElementById("emailError").innerHTML = "Please enter your email address.";
+        return false;
+      } else {
+        document.getElementById("emailError").innerHTML = "";
+      }
+
+      if (password === "") {
+        document.getElementById("passwordError").innerHTML = "Please enter a password.";
+        return false;
+      } else {
+        document.getElementById("passwordError").innerHTML = "";
+      }
+
+      // Additional validation logic can be added here
+
+      return true; // If all validation passes, allow the form to be submitted
+    }
+  </script>
+
+</body>
+</html>
